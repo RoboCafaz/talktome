@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿using Autofac;
 using Xamarin.Forms;
 
-namespace TalkToMe
+namespace TalkToMe.Core
 {
     public class App : Application
     {
@@ -29,7 +25,7 @@ namespace TalkToMe
 
             MainPage = new NavigationPage(content);
         }
-
+        
         protected override void OnStart()
         {
             // Handle when your app starts

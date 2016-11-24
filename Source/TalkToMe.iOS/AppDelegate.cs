@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
+using TalkToMe.Core;
+using TalkToMe.iOS.Services.IoC;
 using UIKit;
 
 namespace TalkToMe.iOS
@@ -23,6 +21,8 @@ namespace TalkToMe.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            
+            IoC.Initialize(IoCHelperiOS.RegisteriOSDependencies);
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

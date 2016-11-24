@@ -1,11 +1,8 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using TalkToMe.Core;
+using TalkToMe.Droid.Services.IoC;
 
 namespace TalkToMe.Droid
 {
@@ -20,6 +17,8 @@ namespace TalkToMe.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            IoC.Initialize(IoCHelperDroid.RegisterDroidDependencies);
             LoadApplication(new App());
         }
     }
